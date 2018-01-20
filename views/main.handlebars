@@ -1,0 +1,18 @@
+{{scrapeDone}}
+
+{{#each articles}}
+	<div>
+		<div>
+			{{this.title}}
+		</div>
+		<div>
+			<form method="post" action="/article/{{this._id}}">
+				<button type="submit">Save Article</button>
+			</form>
+		</div>
+		<div>
+			<a href="{{this.link}}">{{this.link}}</a>
+		</div>
+	</div>
+
+{{/each}}
